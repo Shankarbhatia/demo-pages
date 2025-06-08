@@ -1,52 +1,147 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="./output.css" rel="stylesheet">
-</head>
-<body>
-  <main>
-    <section class="relative bg-white py-12 px-6 md:px-16 overflow-hidden border border-blue-500">
-  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center relative z-10">
-    <!-- Left Content -->
-    <div class="">
-      <h1 class="text-4xl md:text-5xl font-bold text-green-700 leading-tight">
-        DELIVERING <br />
-        QUALITY SINCE <br />
-        <span class="text-green-700 font-bold">1928</span>
-      </h1>
-      <p class="mt-6 text-xl font-semibold">Γνωρίστε τη <br /><span class="font-bold">Sivissidis</span></p>
-      
-      <ul class="mt-6 flex flex-wrap gap-4 text-sm text-black font-medium">
-        <li class="flex items-center gap-2">
-          <span class="w-3 h-3 rounded-full bg-green-600 inline-block"></span> Η ιστορία
-        </li>
-        <li class="flex items-center gap-2">
-          <span class="w-3 h-3 rounded-full bg-green-600 inline-block"></span> Οι εγκαταστάσεις
-        </li>
-        <li class="flex items-center gap-2">
-          <span class="w-3 h-3 rounded-full bg-green-600 inline-block"></span> Η ομάδα
-        </li>
-        <li class="text-xs text-gray-500">local scrolls</li>
-      </ul>
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <header class="w-full bg-white shadow-md">
+        <div
+          class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3 md:py-4"
+        >
+          <!-- Logo -->
+          <a href="/" class="flex items-center gap-2">
+            <img src="./assets/logo.svg" alt="Sivissidis" class="h-8 md:h-16" />
+          </a>
 
-    <!-- Right Image with Scroll Animation -->
-    <div class="relative">
-      <div class="sticky top-24">
-        <img src="./assets/about-imgs/side-img.png" alt="Sivissidis Booth" class="rounded-md shadow-md" />
-        <p class="text-xs text-gray-600 mt-2 text-center">image floats a little down as user scrolls</p>
-      </div>
-    </div>
-  </div>
+          <!-- Navigation (Desktop) -->
+          <nav
+            class="hidden md:flex items-center gap-8 text-sm font-medium text-black"
+          >
+            <a href="#billiards" class="hover:[#1A7563]">Μπιλιάρδα</a>
+            <a href="#football" class="hover:[#1A7563]">Ποδοσφαιράκια</a>
+            <a href="#bowling" class="hover:[#1A7563]">Bowling</a>
+            <a href="#products" class="hover:[#1A7563]">Όλα τα προϊόντα</a>
+            <a href="#about" class="hover:[#1A7563]">Ο κόσμος μας</a>
+          </nav>
 
-  <!-- Decorative lines (optional, using absolute positions) -->
-  <div class="absolute top-0 left-0 w-full h-full pointer-events-none">
-    <!-- You can add SVG lines or divs with borders here -->
-  </div>
-</section>
+          <!-- Right Icons -->
+          <div class="flex items-center gap-4">
+            <div
+              class="flex items-center justify-center gap-4 bg-[#1A7563] px-5 py-5 rounded-tl-[32px] rounded-tr-[22px] rounded-br-[22px] rounded-bl-[55px] text-white text-sm"
+            >
+              <a href="/cart" title="Cart"> 🛍️ </a>
+              <a href="/search" title="Search"> 🔍 </a>
+              <a href="/contact" title="Call"> 📞 </a>
+              <a href="/account" title="Account"> 👤 </a>
+              <a href="#" class="ml-2 text-xs">EN | GR</a>
+            </div>
 
-  </main>
-</body>
+            <!-- Hamburger for Mobile -->
+            <button
+              class="md:hidden text-[#1A7563] text-2xl"
+              id="mobile-menu-toggle"
+              aria-label="Open menu"
+            >
+              ☰
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden px-4 pb-4">
+          <nav class="flex flex-col gap-4 text-sm font-medium text-black">
+            <a href="#billiards" class="hover:[#1A7563]">Μπιλιάρδα</a>
+            <a href="#football" class="hover:[#1A7563]">Ποδοσφαιράκια</a>
+            <a href="#bowling" class="hover:[#1A7563]">Bowling</a>
+            <a href="#products" class="hover:[#1A7563]">Όλα τα προϊόντα</a>
+            <a href="#about" class="hover:[#1A7563]">Ο κόσμος μας</a>
+          </nav>
+        </div>
+      </header>
+      <section class="relative py-24 px-6 md:px-16 overflow-hidden">
+        <div class="max-w-7xl mx-auto relative md:block grid grid-cols-1 gap-4">
+          <!-- Left Content -->
+          <div class="w-full">
+            <h1
+              class="text-5xl lg:text-[114px] md:text-[68px] relative z-20 inline font-bold md:leading-[1.1em] leading-[1.2em] mix-blend-multiply text-[#1A7563]"
+            >
+              DELIVERING <br />
+              QUALITY SINCE <br />
+              <span class="">1928</span>
+            </h1>
+            <p
+              class="lg:mt-6 md:mt-3 text-3xl md:text-[48px] font-semibold leading-[1.2em]"
+            >
+              Γνωρίστε τη <br /><span class="font-bold">Sivissidis</span>
+            </p>
+
+            <ul
+              class="mt-6 flex flex-wrap lg:flex-row flex-col justify-start lg:items-center items-start lg:gap-4 gap-2 text-2xl text-black font-medium"
+            >
+              <li class="flex items-center gap-2">
+                <span
+                  class="w-3 h-3 rounded-full bg-[#1A7563] inline-block"
+                ></span>
+                Η ιστορία
+              </li>
+              <li class="flex items-center gap-2">
+                <span
+                  class="w-3 h-3 rounded-full bg-[#1A7563] inline-block"
+                ></span>
+                Οι εγκαταστάσεις
+              </li>
+              <li class="flex items-center gap-2">
+                <span
+                  class="w-3 h-3 rounded-full bg-[#1A7563] inline-block"
+                ></span>
+                Η ομάδα
+              </li>
+              <li class="text-lg">local scrolls</li>
+            </ul>
+          </div>
+
+          <!-- Right Image with Scroll Animation -->
+          <div class="md:absolute md:w-1/2 right-0 top-0 z-0">
+            <div class="">
+              <img
+                class="floatingImage relative duration-700 z-0 w-full"
+                src="./assets/about-imgs/side-img.png"
+                alt="Sivissidis Booth"
+                class="rounded-md shadow-md"
+              />
+              <p class="text-xs text-gray-600 mt-2 text-center">
+                image floats a little down as user scrolls
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Decorative lines (optional, using absolute positions) -->
+        <div
+          class="absolute top-10 lg:left-10 md:left-5 lg:w-full md:w-[80%] h-full pointer-events-none"
+        >
+          <img src="./assets/about-imgs/about-side-vector1.svg" alt="" />
+        </div>
+      </section>
+      <section class="h-screen"></section>
+    </main>
+
+    <script>
+      window.addEventListener("scroll", () => {
+        const scrollY = window.scrollY;
+        const image = document.querySelector(".floatingImage");
+        const offset = Math.min(scrollY * 0.2, 40); // limit the max movement
+        image.style.transform = `translateY(${offset}px)`;
+      });
+
+      const toggle = document.getElementById("mobile-menu-toggle");
+      const menu = document.getElementById("mobile-menu");
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
 </html>
